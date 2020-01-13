@@ -14,11 +14,11 @@ This is a calculator app built using React.
 
 ## Live Demo
 
-[Live Demo Link](https://onedebos.github.io/weather-app/)
+[Production version](https://debs-calculator-2.herokuapp.com/)
 
 ## Clone the project
 ```
-git clone https://github.com/onedebos/weather-app.git
+git clone https://github.com/onedebos/calculator.git
 ```
 
 ## Install dependencies
