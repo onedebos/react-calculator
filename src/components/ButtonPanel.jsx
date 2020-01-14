@@ -1,38 +1,39 @@
 import React, { Component } from "react";
+import "./ButtonPanel.css";
 
 class ButtonPanel extends Component {
   render() {
     return (
-      <div>
+      <div className="button-panel-component">
         <div className="gr-1">
-          <button>AC</button>
-          <button>+/-</button>
-          <button>%</button>
-          <button>/</button>
+          <button className="gr-btns">AC</button>
+          <button className="gr-btns">+/-</button>
+          <button className="gr-btns">%</button>
+          <button className="gr-btns">/</button>
         </div>
         <div className="gr-2">
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>X</button>
+          <button className="gr-btns">7</button>
+          <button className="gr-btns">8</button>
+          <button className="gr-btns">9</button>
+          <button className="gr-btns">X</button>
         </div>
         <div className="gr-3">
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>-</button>
+          <button className="gr-btns">4</button>
+          <button className="gr-btns">5</button>
+          <button className="gr-btns">6</button>
+          <button className="gr-btns">-</button>
         </div>
-        <div className="gr-2">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>+</button>
+        <div className="gr-4">
+          <button className="gr-btns">1</button>
+          <button className="gr-btns">2</button>
+          <button className="gr-btns">3</button>
+          <button className="gr-btns">+</button>
         </div>
-        <div className="gr-2">
-          <button>0</button>
-          <button>.</button>
-          <button>=</button>
-          <button> </button>
+        <div className="gr-5">
+          <button className="gr-btns">0</button>
+          <button className="gr-btns">.</button>
+          <button className="gr-btns">=</button>
+          <button className="gr-btns"> </button>
         </div>
       </div>
     );

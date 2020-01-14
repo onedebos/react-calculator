@@ -1,0 +1,9 @@
+.display-component {
+  display: flex;
+  background-color: grey;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+  justify-content: flex-end;
+}
