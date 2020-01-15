@@ -1,0 +1,14 @@
+.button-panel-component {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+
+.gr-1,
+.gr-2,
+.gr-3,
+.gr-4,
+.gr-5 {
+  height: 100px;
+  display: flex;
+}
