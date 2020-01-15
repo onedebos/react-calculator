@@ -4,5 +4,9 @@
   justify-content: center;
   width: 25%;
   color: black;
-  border: 1px solid black;
+  border: 0;
+}
+
+.zero {
+  flex: 0 360px;
 }

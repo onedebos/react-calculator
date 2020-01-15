@@ -1,18 +1,17 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import "./Display.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Display.css';
 
-class Display extends Component {
-  static propTypes = {
-    result: PropTypes.string
-  };
-  render() {
-    return (
-      <div className="display-component">
-        <div>{this.props.result}</div>
-      </div>
-    );
-  }
-}
+const Display = (props) => {
+  const { result } = props;
+  return <div className="display-component">{result}</div>;
+};
 
+Display.propTypes = {
+  result: PropTypes.string,
+};
+
+Display.defaultProps = {
+  result: '0',
+};
 export default Display;
