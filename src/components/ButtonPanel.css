@@ -1,5 +1,8 @@
 .button-panel-component {
-  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 700px; */
 }
 
 .gr-1,
@@ -7,23 +10,7 @@
 .gr-3,
 .gr-4,
 .gr-5 {
-  height: 100px;
   display: flex;
-}
-
-.gr-btns {
-  height: 100px;
-  width: 180px;
-  color: black;
-  font-size: 2em;
-  background-color: #dfdfdf;
-  border: 0.5px solid #d0d0d0;
-  cursor: pointer;
-  font-weight: 400;
-}
-
-.gr-btns:hover {
-  background-color: #dfdfdf7a;
 }
 
 .gr-1 :last-child,
@@ -36,4 +23,8 @@
 
 .zero {
   flex: 0 360px;
+}
+
+.buttonGroup {
+  display: flex;
 }
