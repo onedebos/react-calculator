@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "big.js": "^5.2.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -35,7 +36,6 @@
     ]
   },
   "devDependencies": {
-    "big.js": "^5.2.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1"
   }
