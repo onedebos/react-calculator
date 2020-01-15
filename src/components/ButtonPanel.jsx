@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./ButtonPanel.css";
+import React, { Component } from 'react';
+import './ButtonPanel.css';
 
 class ButtonPanel extends Component {
   render() {
@@ -30,10 +30,10 @@ class ButtonPanel extends Component {
           <button className="gr-btns">+</button>
         </div>
         <div className="gr-5">
-          <button className="gr-btns">0</button>
+          <button className="gr-btns zero">0</button>
+
           <button className="gr-btns">.</button>
           <button className="gr-btns">=</button>
-          <button className="gr-btns"> </button>
         </div>
       </div>
     );
