@@ -1,13 +1,8 @@
-.Button {
-  width: 100%;
-}
-
 button {
   height: 100px;
-  width: 160px;
+  width: 100%;
   color: black;
   font-size: 2em;
-  background-color: #dfdfdf;
   border: 0.5px solid #d0d0d0;
   cursor: pointer;
   font-weight: 400;

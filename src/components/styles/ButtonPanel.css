@@ -1,0 +1,11 @@
+.button-panel-component {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 100px;
+}
+
+.row {
+  height: 100px;
+  display: flex;
+}
