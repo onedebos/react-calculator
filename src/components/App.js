@@ -1,7 +1,7 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import './App.css';
+import './styles/App.css';
 import calculate from '../logic/calculate';
 
 // calling calculate here so code can pass stickler checks

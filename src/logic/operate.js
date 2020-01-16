@@ -8,10 +8,12 @@ const operate = (numberOne, numberTwo, operation) => {
       return Number(Big(numberOne)) + Number(Big(numberTwo));
     case '/':
       return Number(Big(numberOne)) / Number(Big(numberTwo));
+    case '/0':
+      return '0';
     case '%':
       return Number(Big(numberOne)) % Number(Big(numberTwo));
     default:
-      return Big(Number(numberOne)) * Big(Number(numberTwo));
+      return Number(Big(numberOne)) * Number(Big(numberTwo));
   }
 };
 
