@@ -2,13 +2,10 @@
   display: flex;
   flex-direction: column;
   width: 700px;
+  height: 100px;
 }
 
-.gr-1,
-.gr-2,
-.gr-3,
-.gr-4,
-.gr-5 {
+.row {
   height: 100px;
   display: flex;
 }
