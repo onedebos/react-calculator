@@ -1,4 +1,4 @@
-//eslint-disable-next-line
+// eslint-disable-next-line
 import Big from 'big.js';
 import operate from './operate';
 
