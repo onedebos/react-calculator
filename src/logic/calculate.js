@@ -1,4 +1,3 @@
-import Big from 'big';
 import operate from './operate';
 
 const calculate = (calcDataObj, buttonName) => {
@@ -55,18 +54,14 @@ const calculate = (calcDataObj, buttonName) => {
     if (calcDataObj.operation && calcDataObj.next) {
       const result = operate(calcDataObj.total, calcDataObj.next, calcDataObj.operation);
       return {
-        total: Big(result)
-          .div(Big('100'))
-          .toString(),
+        total: result.toString(),
         next: null,
         operation: null,
       };
     }
     if (calcDataObj.next) {
       return {
-        next: Big(calcDataObj.next)
-          .div(Big('100'))
-          .toString(),
+        next: calcDataObj.next.toString(),
       };
     }
     return {};
