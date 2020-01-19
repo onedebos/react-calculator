@@ -10,7 +10,7 @@ const operate = (numberOne, numberTwo, operation) => {
     case '/':
       return Number(Big(numberOne)) / Number(Big(numberTwo));
     case '/0':
-      return '0';
+      return 'err';
     case '%':
       return Number(Big(numberOne)) % Number(Big(numberTwo));
     default:
