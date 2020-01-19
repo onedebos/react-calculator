@@ -3,6 +3,8 @@ import Big from 'big.js';
 import operate from './operate';
 
 const calculate = (calcDataObj, buttonName) => {
+  const isNumber = (item) => /[0-9]+/.test(item);
+
   if (buttonName === 'AC') {
     return {
       total: null,
@@ -11,45 +13,28 @@ const calculate = (calcDataObj, buttonName) => {
     };
   }
 
-  if (buttonName === '0' && calcDataObj.next === '0') {
-    return {};
-  }
+  if (isNumber(buttonName)) {
+    if (buttonName === '0' && calcDataObj.next === '0') {
+      return {};
+    }
 
-  if (buttonName === '+/-') {
+    if (calcDataObj.operation) {
+      if (calcDataObj.next) {
+        return { next: calcDataObj.next + buttonName };
+      }
+      return { next: buttonName };
+    }
     if (calcDataObj.next) {
-      return { next: (-1 * parseFloat(calcDataObj.next)).toString() };
-    }
-    if (calcDataObj.total) {
-      return { total: (-1 * parseFloat(calcDataObj.total)).toString() };
-    }
-    return {};
-  }
-
-  if (buttonName === '=') {
-    if (calcDataObj.next && calcDataObj.operation) {
+      const next = calcDataObj.next === '0' ? buttonName : calcDataObj.next + buttonName;
       return {
-        total: operate(calcDataObj.total, calcDataObj.next, calcDataObj.operation),
-        next: null,
-        operation: null,
+        next,
+        total: null,
       };
     }
-  }
-
-  if (buttonName === '.') {
-    if (calcDataObj.next) {
-      if (calcDataObj.next.includes('.')) {
-        return {};
-      }
-      return { next: `${calcDataObj.next}.` };
-    }
-    return { next: '0.' };
-  }
-
-  if (calcDataObj.operation) {
-    if (calcDataObj.next) {
-      return { next: calcDataObj.next + buttonName };
-    }
-    return { next: buttonName };
+    return {
+      next: buttonName,
+      total: null,
+    };
   }
 
   if (buttonName === '%') {
@@ -73,13 +58,36 @@ const calculate = (calcDataObj, buttonName) => {
     return {};
   }
 
-  if (calcDataObj.next) {
-    const next = calcDataObj.next === '0' ? buttonName : calcDataObj.next + buttonName;
-    return {
-      next,
-      total: null,
-    };
+  if (buttonName === '.') {
+    if (calcDataObj.next) {
+      if (calcDataObj.next.includes('.')) {
+        return {};
+      }
+      return { next: `${calcDataObj.next}.` };
+    }
+    return { next: '0.' };
   }
+  if (buttonName === '=') {
+    if (calcDataObj.next && calcDataObj.operation) {
+      return {
+        total: operate(calcDataObj.total, calcDataObj.next, calcDataObj.operation),
+        next: null,
+        operation: null,
+      };
+    }
+    return {};
+  }
+
+  if (buttonName === '+/-') {
+    if (calcDataObj.next) {
+      return { next: (-1 * parseFloat(calcDataObj.next)).toString() };
+    }
+    if (calcDataObj.total) {
+      return { total: (-1 * parseFloat(calcDataObj.total)).toString() };
+    }
+    return {};
+  }
+
   if (calcDataObj.operation) {
     return {
       total: operate(calcDataObj.total, calcDataObj.next, calcDataObj.operation),
@@ -87,9 +95,11 @@ const calculate = (calcDataObj, buttonName) => {
       operation: buttonName,
     };
   }
+
   if (!calcDataObj.next) {
     return { operation: buttonName };
   }
+
   return {
     total: calcDataObj.next,
     next: null,
