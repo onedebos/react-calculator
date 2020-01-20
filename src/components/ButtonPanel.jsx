@@ -4,10 +4,10 @@ import Button from './Button';
 import './styles/ButtonPanel.css';
 
 class ButtonPanel extends React.Component {
-  // eslint-disable-next-line
   handleClick = (buttonName) => {
     this.props.clickHandler(buttonName);
   };
+
   render() {
     return (
       <div className="button-panel-component">
@@ -52,3 +52,10 @@ class ButtonPanel extends React.Component {
 }
 
 export default ButtonPanel;
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.string,
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: '0',
+};

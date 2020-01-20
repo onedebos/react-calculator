@@ -14,14 +14,14 @@ const operate = (numberOne, numberTwo, operation) => {
 
     case 'x':
       return Big(numberOne)
-        .times(numberTwo)
+        .times(numberTwo || (operation === 'x' ? '1' : '0'))
         .toString();
     case '/':
-      if (Big(numberTwo) === '0') {
-        return '0';
+      if (numberTwo === '0') {
+        return 'divide by 0 err';
       }
       return Big(numberOne)
-        .div(Big(numberTwo))
+        .div(numberTwo || (operation === '/' ? '1' : '0'))
         .toString();
 
     default:
