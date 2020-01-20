@@ -18,7 +18,7 @@ const operate = (numberOne, numberTwo, operation) => {
         .toString();
     case '/':
       if (numberTwo === '0') {
-        return 'divide by 0 err';
+        return '0';
       }
       return Big(numberOne)
         .div(numberTwo || (operation === '/' ? '1' : '0'))
