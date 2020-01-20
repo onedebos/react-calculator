@@ -5,7 +5,8 @@ import './styles/ButtonPanel.css';
 
 class ButtonPanel extends React.Component {
   handleClick = (buttonName) => {
-    this.props.clickHandler(buttonName);
+    const { clickHandler } = this.props;
+    clickHandler(buttonName);
   };
 
   render() {
@@ -53,7 +54,7 @@ class ButtonPanel extends React.Component {
 
 export default ButtonPanel;
 ButtonPanel.propTypes = {
-  clickHandler: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 ButtonPanel.defaultProps = {
