@@ -9,14 +9,15 @@ This is a calculator app built using React.
 - Webpack
 
 ## Linters used
-- ESlint
 
+- ESlint
 
 ## Live Demo
 
 [Production version](https://debs-calculator-2.herokuapp.com/)
 
 ## Clone the project
+
 ```
 git clone https://github.com/onedebos/calculator.git
 ```
@@ -24,15 +25,17 @@ git clone https://github.com/onedebos/calculator.git
 ## Install dependencies
 
 ```
-npm install 
+npm install
 ```
+
 or
 
 ```
-yarn install 
+yarn install
 ```
 
 ## Run the app
+
 ```
 yarn start
 ```
@@ -40,7 +43,7 @@ yarn start
 or
 
 ```
-npm start 
+npm start
 ```
 
 ## Authors
@@ -55,8 +58,12 @@ npm start
 
 Give a ⭐️ if you like this project!
 
-
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+
 # weather-app
+
+## References
+
+- [Calculator App](https://github.com/ahfarmer/calculator)

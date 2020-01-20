@@ -1,20 +1,31 @@
-// eslint-disable-next-line
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
   switch (operation) {
-    case '-':
-      return Number(Big(numberOne)) - Number(Big(numberTwo));
     case '+':
-      return Number(Big(numberOne)) + Number(Big(numberTwo));
+      return Big(numberOne)
+        .plus(numberTwo)
+        .toString();
+
+    case '-':
+      return Big(numberOne)
+        .minus(numberTwo)
+        .toString();
+
+    case 'x':
+      return Big(numberOne)
+        .times(numberTwo || (operation === 'x' ? '1' : '0'))
+        .toString();
     case '/':
-      return Number(Big(numberOne)) / Number(Big(numberTwo));
-    case '/0':
-      return '0';
-    case '%':
-      return Number(Big(numberOne)) % Number(Big(numberTwo));
+      if (numberTwo === '0') {
+        return '0';
+      }
+      return Big(numberOne)
+        .div(numberTwo || (operation === '/' ? '1' : '0'))
+        .toString();
+
     default:
-      return Number(Big(numberOne)) * Number(Big(numberTwo));
+      return '0';
   }
 };
 
