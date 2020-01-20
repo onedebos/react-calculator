@@ -15,6 +15,7 @@ class App extends React.Component {
       display: null,
     };
   }
+  // eslint-disable-next-line
   handleClick = (buttonName) => {
     this.setState(calculate(this.state, buttonName));
   };

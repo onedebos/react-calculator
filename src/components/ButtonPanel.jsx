@@ -4,6 +4,7 @@ import Button from './Button';
 import './styles/ButtonPanel.css';
 
 class ButtonPanel extends React.Component {
+  // eslint-disable-next-line
   handleClick = (buttonName) => {
     this.props.clickHandler(buttonName);
   };
