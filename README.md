@@ -2,6 +2,9 @@
 
 This is a calculator app built using React.
 
+## Video demo
+![](./calculator.gif)
+
 ## Built With
 
 - React
